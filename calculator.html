@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f2f5;
+            margin: 0;
+        }
+        .calculator {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+        .display {
+            background-color: #282c34;
+            color: #61dafb;
+            font-size: 2em;
+            text-align: right;
+            padding: 10px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            height: 70px;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 10px;
+        }
+        .button {
+            background-color: #61dafb;
+            color: #282c34;
+            font-size: 1.5em;
+            border: none;
+            border-radius: 10px;
+            padding: 20px;
+            cursor: pointer;
+            transition: background-color 0.2s, transform 0.2s;
+        }
+        .button:hover {
+            background-color: #21a1f1;
+            transform: scale(1.05);
+        }
+        .button:active {
+            transform: scale(1);
+        }
+        .button.operator {
+            background-color: #f39c12;
+            color: #fff;
+        }
+        .button.operator:hover {
+            background-color: #e67e22;
+        }
+        .button.clear {
+            background-color: #e74c3c;
+            color: #fff;
+        }
+        .button.clear:hover {
+            background-color: #c0392b;
+        }
+        .button.backspace {
+            background-color: #95a5a6;
+            color: #fff;
+        }
+        .button.backspace:hover {
+            background-color: #7f8c8d;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <div class="display" id="display"></div>
+        <div class="buttons">
+            <button class="button clear" onclick="clearDisplay()">C</button>
+            <button class="button" onclick="appendToDisplay('7')">7</button>
+            <button class="button" onclick="appendToDisplay('8')">8</button>
+            <button class="button" onclick="appendToDisplay('9')">9</button>
+            <button class="button operator" onclick="appendToDisplay('+')">+</button>
+            <button class="button" onclick="appendToDisplay('4')">4</button>
+            <button class="button" onclick="appendToDisplay('5')">5</button>
+            <button class="button" onclick="appendToDisplay('6')">6</button>
+            <button class="button operator" onclick="appendToDisplay('-')">-</button>
+            <button class="button" onclick="appendToDisplay('1')">1</button>
+            <button class="button" onclick="appendToDisplay('2')">2</button>
+            <button class="button" onclick="appendToDisplay('3')">3</button>
+            <button class="button operator" onclick="appendToDisplay('*')">×</button>
+            <button class="button" onclick="appendToDisplay('0')">0</button>
+            <button class="button" onclick="appendToDisplay('.')">.</button>
+            <button class="button backspace" onclick="backspace()">⌫</button>
+            <button class="button operator" onclick="appendToDisplay('/')">÷</button>
+            <button class="button" onclick="calculateResult()">=</button>
+        </div>
+    </div>
+    <script>
+        function appendToDisplay(value) {
+            document.getElementById('display').innerText += value;
+        }
+        function clearDisplay() {
+            document.getElementById('display').innerText = '';
+        }
+        function backspace() {
+            let display = document.getElementById('display');
+            display.innerText = display.innerText.slice(0, -1);
+        }
+        function calculateResult() {
+            let display = document.getElementById('display');
+            try {
+                display.innerText = eval(display.innerText);
+            } catch {
+                display.innerText = 'Error';
+            }
+        }
+    </script>
+</body>
+</html>

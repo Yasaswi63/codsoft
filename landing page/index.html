@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Cooking Recipes</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('food.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #333;
+        }
+
+        nav {
+            background-color: rgba(255, 112, 77, 0.8);
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+
+        nav .links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 1.2em;
+        }
+
+        header {
+            position: relative;
+            text-align: center;
+            color: white;
+            background: url('https://www.bbcgoodfood.com/sites/default/files/guide/guide-image/2019/02/all-in-one.jpg') no-repeat center center/cover;
+            height: 80vh;
+        }
+
+        header .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        header .overlay h1 {
+            font-size: 3.5em;
+            margin: 0;
+        }
+
+        header .overlay p {
+            font-size: 1.8em;
+        }
+
+        .content {
+            padding: 40px 20px;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+
+        .content h2 {
+            font-size: 2.5em;
+            color: #050303;
+            background: url('https://www.example.com/delicious-recipes-bg.jpg') no-repeat center center/cover;
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+        }
+
+        .grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .grid .box {
+            background-color: white;
+            width: 30%;
+            margin: 10px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+
+        .grid .box:hover {
+            transform: scale(1.05);
+        }
+
+        .grid .box img {
+            width: 100%;
+            height: auto;
+        }
+
+        .grid .box .info {
+            padding: 20px;
+        }
+
+        .grid .box .info h3 {
+            margin: 0;
+            color: #ff704d;
+        }
+
+        .grid .box .info p {
+            color: #666;
+            font-size: 1em;
+        }
+
+        .about-us {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 40px 20px;
+            border-radius: 10px;
+            margin: 40px auto;
+            max-width: 800px;
+            text-align: left;
+        }
+
+        .about-us h2 {
+            color: #ff704d;
+            margin-bottom: 20px;
+        }
+
+        .about-us p {
+            font-size: 1.2em;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .contact-form {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin: 40px auto;
+            max-width: 600px;
+        }
+
+        .contact-form h2 {
+            margin-bottom: 20px;
+            color: #ff704d;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .contact-form button {
+            background-color: #ff704d;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        footer {
+            background-color: rgba(255, 112, 77, 0.8);
+            color: white;
+            text-align: center;
+            padding: 10px 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <h1>Cooking Recipes</h1>
+        <div class="links">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+            <a href="#">Blog</a>
+        </div>
+    </nav>
+    <header>
+        <div class="overlay">
+            <h1>Delicious Recipes</h1>
+            <p>Find your next favorite meal</p>
+        </div>
+    </header>
+    <div class="about-us">
+        <h2>About Us</h2>
+        <p>Welcome to Cooking Recipes! Our mission is to bring you the most delicious and easy-to-follow recipes from around the world. Whether you're a seasoned chef or just starting out, our recipes are designed to help you create mouth-watering dishes that will impress your family and friends.</p>
+        <p>We believe that cooking should be a joyful and creative experience. That's why we are dedicated to providing you with a diverse collection of recipes that cater to all tastes and dietary needs. From traditional Indian cuisine to modern fusion dishes, you'll find a wide variety of recipes to explore and enjoy.</p>
+        <p>Join us on this culinary journey and discover the joy of cooking. Happy cooking!</p>
+    </div>
+    <div class="content">
+        <h2>Popular Recipes</h2>
+        <div class="grid">
+            <div class="box">
+                <img src="Chicken-Curry.jpg" alt="Chicken Curry">
+                <div class="info">
+                    <h3>Chicken Curry</h3>
+                    <p>A rich and flavorful Indian dish.</p>
+                </div>
+            </div>
+            <div class="box">
+                <img src="biryani.jpg" alt="Biryani">
+                <div class="info">
+                    <h3>Biryani</h3>
+                    <p>Aromatic and savory rice dish.</p>
+                </div>
+            </div>
+            <div class="box">
+                <img src="cake.jpg" alt="Cake">
+                <div class="info">
+                    <h3>Chocolate Cake</h3>
+                    <p>Rich and moist chocolate delight.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="contact-form">
+        <h2>Contact Us</h2>
+        <form>
+            <input type="text" id="name" name="name" placeholder="Your Name">
+            <input type="email" id="email" name="email" placeholder="Your Email">
+            <textarea id="message" name="message" placeholder="Your Message" rows="4"></textarea>
+            <button type="button" onclick="submitForm()">Submit</button>
+        </form>
+    </div>
+    <footer>
+        <p>@ 2024 Thanks for visiting.</p>
+    </footer>
+</body>
+
+</html>

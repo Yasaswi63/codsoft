@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yasaswi Maram - Personal Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+
+        /* Navigation Styles */
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav h1 {
+            margin: 0;
+        }
+
+        /* Container Styles */
+        .container {
+            width: 80%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Section Styles */
+        section {
+            background-color: #fff;
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        section h2 {
+            text-align: center;
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        /* About Section */
+        .bio {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .bio img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            flex-shrink: 0;
+        }
+
+        .bio p {
+            max-width: 800px;
+        }
+
+        /* Details Section */
+        .details table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .details th, .details td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        .details th {
+            background-color: #f4f4f4;
+        }
+
+        /* Skills Section */
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 20px;
+        }
+
+        .skills div {
+            background-color: #e0e0e0;
+            padding: 20px;
+            border-radius: 10px;
+            flex: 1 1 200px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Projects Section */
+        .projects {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 20px;
+        }
+
+        .projects div {
+            background-color: #e0e0e0;
+            padding: 20px;
+            border-radius: 10px;
+            flex: 1 1 300px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Resume Button */
+        .resume-button {
+            display: inline-block;
+            background-color: #100e0b;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        .resume-button:hover {
+            background-color: #cc7a00;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <h1>Yasaswi Maram</h1>
+    </nav>
+
+    <div class="container">
+        <section id="about">
+            <h2>About Me</h2>
+            <div class="bio">
+                <!-- Ensure this path is correct -->
+                <img src="ss.jpeg" alt="profile picture">
+                <p>
+                    I am a dedicated and hardworking BTech student at United Institute of Management Allahabad, set to graduate in 2024. With knowledge in programming languages, including C, C++, Java, C#, Python, databases Oracle, MySQL, MongoDB, HTML, CSS, and JS, I am committed to delivering quality work and am constantly seeking opportunities to enhance my skills and learn new technologies. I strongly believe that dedication and hard work are the keys to success, and I am determined to achieve my goals.
+                </p>
+            </div>
+        </section>
+
+        <section id="details">
+            <h2>Basic Details</h2>
+            <div class="details">
+                <table>
+                    <tr>
+                        <th>Name</th>
+                        <td>Yasaswi Maram</td>
+                    </tr>
+                    <tr>
+                        <th>Phone Number</th>
+                        <td>+91 798982088</td>
+                    </tr>
+                    <tr>
+                        <th>Email</th>
+                        <td>yasaswi.maram@example.com</td>
+                    </tr>
+                    <tr>
+                        <th>Date of Birth</th>
+                        <td>29-Aug-2003</td>
+                    </tr>
+                    <tr>
+                        <th>Address</th>
+                        <td>Addanki, Andhra Pradesh</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills">
+            <h2>Skills</h2>
+            <div class="skills">
+                <div>Communication</div>
+                <div>Leadership</div>
+                <div>Technical</div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="projects">
+                <div>
+                    <strong>Number Game:</strong>
+                    <p>A fun and interactive game where users guess the correct number within a specified range.</p>
+                </div>
+                <div>
+                    <strong>Calculator:</strong>
+                    <p>A simple application to perform basic arithmetic operations like addition, subtraction, multiplication, and division.</p>
+                </div>
+                <div>
+                    <strong>Hospital Management System:</strong>
+                    <p>A comprehensive system to manage hospital operations, including patient records, appointments, and staff management.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resume Section -->
+        <section id="resume">
+            <h2>Resume</h2>
+            <p>Download my resume to get a detailed overview of my skills, experience, and accomplishments.</p>
+            <!-- Use a relative path or correct file path -->
+            <a href="file:///C:/Users/yasas/Downloads/211FA07063_resume.pdf" class="resume-button" download>Download Resume</a>
+        </section>
+    </div>
+
+</body>
+
+</html>
